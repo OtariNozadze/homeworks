@@ -34,7 +34,7 @@ class LinkedList:
         while current_node.next and current_node.next.data != value:
             current_node = current_node.next
 
-        if current_node.next and current_node.next.data == value:
+        if current_node.next:
             current_node.next = current_node.next.next
         
     def display(self):
