@@ -37,8 +37,6 @@ class CartItems(Base):
         if not product:
             raise ValueError("Product not found")
         
-        if quantity > product.quantity_in_stock or quantity <= 0:
-            raise ValueError("Quantity cant be negative or quantity cannot exceed stock available")
 
         self.product_id = product_id
         self.quantity = quantity

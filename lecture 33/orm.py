@@ -17,6 +17,7 @@ def main():
             add_item = input("Input Item Id You Want To Add: ")
             add_quantity = input("Input Quantity You Want To Add: ")
             add_to_cart = CartItems(add_item, add_quantity)
+            session.add(add_to_cart)
         elif choice == '3':
             item_id = input("Input Item Id You Want To Delete: ")
             delete_cart = session.query(CartItems).filter(CartItems.product_id == item_id)
